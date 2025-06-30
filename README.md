@@ -36,5 +36,19 @@
 
 ### 📥 Install dependencies
 
-```bash
-pip install yt-dlp
+`bash`
+`pip install yt-dlp`
+
+---
+
+🙌 Made with love by Faizan Ali
+If you like this release, ⭐ star the repo, share it with friends, and stay tuned for future updates!
+
+☕ Support This Project
+If you found AlyTube helpful and want to support its development, you can send a small contribution via UPI:
+
+graphql
+Copy
+Edit
+💖 UPI ID: `alysbi@ybl`
+Your support is truly appreciated and helps keep this tool free and updated. Thank you!
