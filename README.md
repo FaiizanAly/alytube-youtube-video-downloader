@@ -2,8 +2,6 @@
 
 **AlyTube** is a simple, clean, and powerful YouTube video/audio downloader built with Python. It lets you easily download videos in your preferred quality (144p to 1080p+) or extract audio as MP3 — all through a modern, user-friendly GUI. No coding knowledge needed!
 
-![AlyTube Screenshot](screenshot.png) <!-- Optional if you add a screenshot -->
-
 ---
 
 ## 🚀 Features
