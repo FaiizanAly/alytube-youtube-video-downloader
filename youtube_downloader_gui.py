@@ -39,7 +39,14 @@ def fetch_formats():
             video_options = []
             for f in formats:
                 if f.get('vcodec') != 'none' and f.get('acodec') != 'none':
-                    label = f"{f['format_id']} - {f.get('height', '')}p - {f.get('ext', '')}"
+                    size_bytes = f.get('filesize') or f.get('filesize_approx')
+                    if size_bytes:
+                        size_mb = round(size_bytes / (1024 * 1024), 2)
+                        size_str = f"{size_mb} MB" if size_mb < 1024 else f"{round(size_mb/1024, 2)} GB"
+                    else:
+                        size_str = "Unknown"
+
+                    label = f"{f['format_id']} - {f.get('height', '')}p - {f.get('ext', '')} - {size_str}"
                     video_options.append((label, f['format_id']))
 
             available_formats = video_options
@@ -71,7 +78,7 @@ def download():
         ydl_opts = {
             'outtmpl': os.path.join(folder, '%(title)s.%(ext)s'),
             'progress_hooks': [progress_hook],
-            'no_color': True  # ✅ Disable colored output
+            'no_color': True
         }
 
         if fmt == "mp3":
